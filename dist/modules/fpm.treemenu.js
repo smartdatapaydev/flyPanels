@@ -190,10 +190,12 @@
 		if (json.length > 0) {
 			HTMLMarkup += '<ul role="group" aria-hidden="true" hidden>';
 			json.forEach(function (menuitem) {
+				const menuitemUrl = menuitem.Url === '#' || menuitem.Url === '' ? 'javascript:void(0)' : menuitem.Url;
+				
 				if (menuitem.hasOwnProperty('Children')) {
 					var mapObj = {
 						'{title}': menuitem.Title,
-						'{url}': menuitem.Url,
+						'{url}': menuitemUrl,
 						'{count}': menuitem.Children.length,
 					};
 					HTMLMarkup += HTMLMarkupitems.lihaschildren.replace(/{title}|{url}|{count}/gi, function (matched) {
@@ -204,7 +206,7 @@
 				} else {
 					var mapObj = {
 						'{title}': menuitem.Title,
-						'{url}': menuitem.Url,
+						'{url}': menuitemUrl,
 					};
 					HTMLMarkup += HTMLMarkupitems.linochildren.replace(/{title}|{url}/gi, function (matched) {
 						return mapObj[matched];

@@ -45,11 +45,21 @@
 					order: 2;
 				}
 			}
-			&.haschildren > div > a.expand > i.fa.icon:before {
-				content: '\f105';
+			&.haschildren > div > a.expand {
+				& > i.fa.icon:before {
+					content: '\f105';
+				}
+				& > i.bi.icon:before {
+					content: '\F285';
+				}
 			}
-			&.expanded > div > a.expand > i.fa.icon:before {
-				content: '\f107';
+			&.expanded > div > a.expand {
+				& > i.fa.icon:before {
+					content: '\f107';
+				}
+				> i.bi.icon:before {
+					content: '\F282';
+				}
 			}
 		}
 	}

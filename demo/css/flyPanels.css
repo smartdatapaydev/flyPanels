@@ -1,24 +1,8 @@
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fadein {
   0% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeout {
-  100% {
-    opacity: 0;
-  }
-  0% {
     opacity: 1;
   }
 }
@@ -62,8 +46,7 @@ body.flypanels-open {
 }
 
 .flypanels-overlay {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: fixed;
   z-index: 1000;
   inset: -5000px;
@@ -71,29 +54,19 @@ body.flypanels-open {
   display: none;
 }
 .flypanels-overlay.fadein {
-  -webkit-animation: fadein;
-          animation: fadein;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation: fadein;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
   display: block;
 }
 .flypanels-overlay.fadeout {
-  -webkit-animation: fadeout;
-          animation: fadeout;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation: fadeout;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
   opacity: 1;
   display: block;
 }
@@ -102,8 +75,7 @@ body.flypanels-open {
   position: fixed;
   max-width: 600px;
   z-index: 2000;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   visibility: hidden;
   transform: rotateX(0deg);
 }
@@ -139,7 +111,7 @@ body.flypanels-open {
 }
 .flypanels-panel .flypanels-content {
   color: #fff;
-  background: #c0392b;
+  background: #3b6c2a;
   max-width: 600px;
   overflow: hidden;
   position: absolute;
@@ -197,7 +169,7 @@ body.flypanels-open {
 .flypanels-button {
   position: fixed;
   width: 50px;
-  background-color: #c0392b;
+  background-color: #3b6c2a;
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
@@ -281,84 +253,90 @@ body.flypanels-open {
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren > div > a.expand > i.fa.icon:before {
   content: "\f105";
 }
+.flypanels-inner nav.flypanels-treemenu ul li.haschildren > div > a.expand > i.bi.icon:before {
+  content: "\f285";
+}
 .flypanels-inner nav.flypanels-treemenu ul li.expanded > div > a.expand > i.fa.icon:before {
   content: "\f107";
 }
+.flypanels-inner nav.flypanels-treemenu ul li.expanded > div > a.expand > i.bi.icon:before {
+  content: "\f282";
+}
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li div {
-  border-bottom-color: #b8564c;
+  border-bottom-color: #4e6d43;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li div a {
-  background-color: #ab3326;
+  background-color: #315a23;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li div a.link {
   border-right: none;
   padding-left: 25px;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren a.link {
-  border-right: 1px solid #b8564c;
+  border-right: 1px solid #4e6d43;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li div {
-  border-bottom-color: #a94c43;
+  border-bottom-color: #425d39;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li div a {
-  background-color: #962d22;
+  background-color: #27471c;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li div a.link {
   border-right: none;
   padding-left: 40px;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren a.link {
-  border-right: 1px solid #a94c43;
+  border-right: 1px solid #425d39;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li div {
-  border-bottom-color: #96443b;
+  border-bottom-color: #374d2f;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li div a {
-  background-color: #81261d;
+  background-color: #1d3515;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li div a.link {
   border-right: none;
   padding-left: 55px;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren a.link {
-  border-right: 1px solid #96443b;
+  border-right: 1px solid #374d2f;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li div {
-  border-bottom-color: #843c34;
+  border-bottom-color: #2c3d26;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li div a {
-  background-color: #6d2018;
+  background-color: #13230d;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li div a.link {
   border-right: none;
   padding-left: 70px;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li.haschildren a.link {
-  border-right: 1px solid #72332d;
+  border-right: 1px solid #202e1c;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li.haschildren li div {
-  border-bottom-color: #72332d;
+  border-bottom-color: #202e1c;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li.haschildren li div a {
-  background-color: #581a14;
+  background-color: #091006;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li.haschildren li div a.link {
   border-right: none;
   padding-left: 85px;
 }
 .flypanels-inner nav.flypanels-treemenu ul li.haschildren li.haschildren li.haschildren li.haschildren li.haschildren li.haschildren a.link {
-  border-right: 1px solid #72332d;
+  border-right: 1px solid #202e1c;
 }
 .flypanels-inner nav.flypanels-treemenu li div a.link:hover,
 .flypanels-inner nav.flypanels-treemenu li.active > div * * > * * a.link {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.8) !important;
-  color: #c0392b;
+  color: #3b6c2a;
 }
 .flypanels-inner nav.flypanels-treemenu li div a.expand:hover {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.8) !important;
-  color: #c0392b;
+  color: #3b6c2a;
 }
 .flypanels-inner nav.flypanels-treemenu ul li a:focus,
 .flypanels-inner nav.flypanels-treemenu .flypanels-inner nav ul li a:visited,
@@ -410,7 +388,7 @@ body.flypanels-open {
 .flypanels-inner nav.flypanels-treemenu.touch li li li li li li a:active {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.8) !important;
-  color: #c0392b;
+  color: #3b6c2a;
 }
 
 .flypanels-inner nav.flypanels-treemenu li.haschildren > ul {
@@ -490,7 +468,7 @@ body.flypanels-open {
 .flypanels-panel .searchpanel li a:hover {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.8) !important;
-  color: #c0392b;
+  color: #3b6c2a;
 }
 .flypanels-panel .searchpanel ul li a:focus,
 .flypanels-panel .searchpanel .searchpanel nav ul li a:visited,
@@ -507,7 +485,7 @@ body.flypanels-open {
 .flypanels-panel .searchpanel .flypanels-searchresult.touch li a:active {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.8) !important;
-  color: #c0392b;
+  color: #3b6c2a;
 }
 
 .flypanels-panel .searchpanel {
@@ -536,7 +514,6 @@ body.flypanels-open {
   border-radius: 50%;
   border: 10px solid rgba(0, 61, 88, 0);
   border-top-color: #fff;
-  -webkit-animation: spin 4s infinite;
   animation: spin 4s infinite;
 }
 .flypanels-panel .searchpanel .loading .loader:before,
@@ -553,18 +530,7 @@ body.flypanels-open {
   right: 30px;
   bottom: 30px;
   top: 30px;
-  -webkit-animation: spin2 4s infinite;
   animation: spin2 4s infinite;
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin2 {
-  100% {
-    -webkit-transform: rotate(720deg);
-  }
 }
 .flypanels-panel .searchpanel .resultinfo {
   color: #fff;
@@ -596,7 +562,7 @@ body.flypanels-open {
 .flypanels-panel .searchpanel .searchbox .searchbutton {
   width: 20px;
   float: right;
-  color: #c0392b;
+  color: #3b6c2a;
   margin-right: 10px;
 }
 .flypanels-panel .searchpanel .searchbox .searchbutton::before {
